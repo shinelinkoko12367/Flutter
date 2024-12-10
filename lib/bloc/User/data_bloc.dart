@@ -14,7 +14,6 @@ class DataBloc extends Bloc<DataEvent, DataState> {
     on<DeleteData>(_onDeleteData);
   }
 
-  // Fetch data
   Future<void> _onFetchData(FetchData event, Emitter<DataState> emit) async {
     emit(DataLoading());
     try {

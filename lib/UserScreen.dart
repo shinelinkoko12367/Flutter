@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:map_bloc_crud/Model/UserModel.dart';
+import 'package:map_bloc_crud/ProductPage.dart';
 import 'package:map_bloc_crud/bloc/User/data_bloc.dart';
 import 'package:map_bloc_crud/bloc/User/data_event.dart';
 import 'package:map_bloc_crud/bloc/User/data_state.dart';
@@ -21,6 +22,14 @@ class UserPage extends StatelessWidget {
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
         actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProductPage()),
+                );
+              },
+              icon: Icon(Icons.shop)),
           IconButton(
               onPressed: () {
                 Navigator.push(
